@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" sizes="16x16" href="plugins/images/favicon.png">
+    <title>Talabie Admin</title>
+    <!-- Bootstrap Core CSS -->
+    <!-- Bootstrap Core CSS -->
+    <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="plugins/bower_components/bootstrap-extension/css/bootstrap-extension.css" rel="stylesheet">
+    <!-- animation CSS -->
+    <link href="css/animate.css" rel="stylesheet">
+    <!-- Menu CSS -->
+    <link href="plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- color CSS -->
+    <link href="css/colors/purple.css" id="theme" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="cssload-speeding-wheel"></div>
+    </div>
+    <div id="wrapper">
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top m-b-0">
+            <div class="navbar-header">
+                <ul class="nav navbar-top-links navbar-left hidden-xs">
+                   
+                    <li class="right-side-toggle"> <a class="waves-effect waves-light" href="javascript:void(0)"><i class="ti-menu"></i></a></li>
+                    <li>
+                     <a class="logo" href="index.html"><img src="plugins/images/talabie-text.png" alt="home" /></span></a>   
+                    </li>
+                </ul>
+                <ul class="nav navbar-top-links navbar-right pull-right">
+                    <li>
+                        <a class="waves-effect waves-light" href="#"><i class="ti-bell"></i><span class="badge badge-success">6</span>
+                        </a>
+                    </li>
+                   
+                    <li class="dropdown">
+                        <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#"> <i class="ti-user"></i> </a>
+                        <ul class="dropdown-menu dropdown-user animated flipInY">
+                            <!-- <li><a href="#"><i class="ti-user"></i> My Profile</a></li>
+                            <li><a href="#"><i class="ti-wallet"></i> My Balance</a></li>
+                            <li><a href="#"><i class="ti-email"></i> Inbox</a></li>
+                            <li role="separator" class="divider"></li> -->
+                            <li><a href="#"><i class="ti-settings"></i> Account Setting</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#"><i class="fa fa-power-off"></i> Logout</a></li>
+                        </ul>
+                        
+                    </li>
+                   
+                    <li class="dropdown"> <a class="waves-effect waves-light" href="javascript:void(0)">Restaurant name <span class="fa fa-angle-down"></span></a></li>
+                    <!-- /.dropdown -->
+                </ul>
+            </div>
+            <!-- /.navbar-header -->
+            <!-- /.navbar-top-links -->
+            <!-- /.navbar-static-side -->
+        </nav>
+        
+        <!-- Page Content -->
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <div class="row bg-title">
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                        <h4 class="page-title">Settings</h4> </div>
+                    <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+                        <ol class="breadcrumb">
+                            <li><a href="#">Dashboard</a></li>
+                            <li class="active">Settings</li>
+                        </ol>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+               
+                <div class="row">
+                    <div class="col-md-12 col-lg-12 col-sm-12">
+                        <div class="white-box">
+                           
+                            <!-- Nav tabs -->
+                            <ul class="nav customtab2 nav-tabs" role="tablist">
+                                <li role="presentation" class="nav-item"><a href="#home6" class="nav-link active" aria-controls="home" role="tab" data-toggle="tab" aria-expanded="false"><span class="visible-xs"><i class="ti-home"></i></span><span class="hidden-xs">  Restaurant Information</span></a></li>
+                                <li role="presentation" class="nav-item"><a href="#profile6" class="nav-link" aria-controls="profile" role="tab" data-toggle="tab" aria-expanded="false"><span class="visible-xs"><i class="ti-user"></i></span> <span class="hidden-xs">Dine In</span></a></li>
+                                <li role="presentation" class="nav-item"><a href="#messages6" class="nav-link" aria-controls="messages" role="tab" data-toggle="tab" aria-expanded="true"><span class="visible-xs"><i class="ti-email"></i></span> <span class="hidden-xs">Pickup</span></a></li>
+                                <li role="presentation" class="nav-item"><a href="#settings6" class="nav-link" aria-controls="settings" role="tab" data-toggle="tab" aria-expanded="false"><span class="visible-xs"><i class="ti-settings"></i></span> <span class="hidden-xs">Reservation</span></a></li>
+                            </ul>
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane fade active in" id="home6">
+                                    <div class="col-md-7 col-sm-12">
+                                     
+                            
+                            <form class="form">
+                                <div class="form-group row">
+                                    <label for="example-text-input" class="col-4 col-form-label">Restaurant Name *</label>
+                                    <div class="col-8">
+                                        <input class="form-control" type="text" value="" placeholder="Restaurant Name" id="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="example-search-input" class="col-4 col-form-label">Restaurant Displayed Name *</label>
+                                    <div class="col-8">
+                                        <input class="form-control" type="text" value="" placeholder="Restaurant Displayed Name" id="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="example-email-input" class="col-4 col-form-label">Country</label>
+                                    <div class="col-8">
+                                        <input class="form-control" type="text" value="" placeholder="Country" id="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="example-url-input" class="col-4 col-form-label">City</label>
+                                    <div class="col-8">
+                                        <input class="form-control" type="text" value="" placeholder="City" id="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="example-tel-input" class="col-4 col-form-label">Postal Code</label>
+                                    <div class="col-8">
+                                        <input class="form-control" type="text" value="" placeholder="Postal Code" id="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="example-password-input" class="col-4 col-form-label">Restaurant Address *</label>
+                                    <div class="col-8">
+                                        <input class="form-control" type="text" value="" placeholder="Restaurant Address" id="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="example-number-input" class="col-4 col-form-label">Restaurant Mailing Address *</label>
+                                    <div class="col-8">
+                                        <input class="form-control" type="text" value="" placeholder="Restaurant Mailing Address" id="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="example-datetime-local-input" class="col-4 col-form-label">Restaurant Email ID *</label>
+                                    <div class="col-8">
+                                        <input class="form-control" type="email" value="" placeholder="restaurantname@gmail.com" id="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="example-date-input" class="col-4 col-form-label">Restaurant Phone Number *</label>
+                                    <div class="col-8">
+                                        <input class="form-control" type="tel" value="" placeholder="Restaurant Phone Number" id="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="example-month-input" class="col-4 col-form-label">Restaurant Manager Name</label>
+                                    <div class="col-8">
+                                        <input class="form-control" type="text" value="" placeholder="Restaurant Manager Name" id="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="example-week-input" class="col-4 col-form-label">Restaurant Manager Email ID</label>
+                                    <div class="col-8">
+                                        <input class="form-control" type="email" value="" placeholder="restaurantmanager@gmail.com" id="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="example-time-input" class="col-4 col-form-label">Restaurant Manager Phone Number</label>
+                                    <div class="col-8">
+                                        <input class="form-control" type="tel" value="" placeholder="Phone Number" id="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="example-color-input" class="col-4 col-form-label">Restaurant Full Description</label>
+                                    <div class="col-8">
+                                        <input class="form-control" type="text" value="" placeholder="Restaurant Full Description" id="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="example-color-input" class="col-4 col-form-label">Restaurant Small Description</label>
+                                    <div class="col-8">
+                                        <input class="form-control" type="text" value="" placeholder="Restaurant Small Description" id="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="example-color-input" class="col-4 col-form-label">Cuisine</label>
+                                    <div class="col-8">
+                                        <input class="form-control" type="text" value="" placeholder="Cuisine" id="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="example-color-input" class="col-4 col-form-label">&nbsp;</label>
+                                    <div class="col-8">
+                                        <button class="btn btn-block btn-success">Save</button>
+                                    </div>
+                                </div>
+                            </form>
+                    
+                                    </div>
+                                    <div class="col-md-6 pull-right">
+                                        &nbsp;
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="profile6">
+                                    <div class="col-md-6 col-sm-12">
+                                        <form class="form">
+                                <div class="form-group row">
+                                    <label for="example-text-input" class="col-2 col-form-label">Monday</label>
+                                    <div class="col-5">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="Start Time">
+                                                <div class="input-group-addon"><i class="ti-calendar"></i></div>
+                                            </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="End Time">
+                                                <div class="input-group-addon"><i class="ti-calendar"></i></div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="example-text-input" class="col-2 col-form-label">Tuesday</label>
+                                    <div class="col-5">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="Start Time">
+                                                <div class="input-group-addon"><i class="ti-calendar"></i></div>
+                                            </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="End Time">
+                                                <div class="input-group-addon"><i class="ti-calendar"></i></div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="example-text-input" class="col-2 col-form-label">Wednesday</label>
+                                    <div class="col-5">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="Start Time">
+                                                <div class="input-group-addon"><i class="ti-calendar"></i></div>
+                                            </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="End Time">
+                                                <div class="input-group-addon"><i class="ti-calendar"></i></div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="example-text-input" class="col-2 col-form-label">Thursday</label>
+                                    <div class="col-5">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="Start Time">
+                                                <div class="input-group-addon"><i class="ti-calendar"></i></div>
+                                            </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="End Time">
+                                                <div class="input-group-addon"><i class="ti-calendar"></i></div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="example-text-input" class="col-2 col-form-label">Friday</label>
+                                    <div class="col-5">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="Start Time">
+                                                <div class="input-group-addon"><i class="ti-calendar"></i></div>
+                                            </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="End Time">
+                                                <div class="input-group-addon"><i class="ti-calendar"></i></div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="example-text-input" class="col-2 col-form-label">Saturday</label>
+                                    <div class="col-5">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="Start Time">
+                                                <div class="input-group-addon"><i class="ti-calendar"></i></div>
+                                            </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="End Time">
+                                                <div class="input-group-addon"><i class="ti-calendar"></i></div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="example-text-input" class="col-2 col-form-label">Sunday</label>
+                                    <div class="col-5">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="Start Time">
+                                                <div class="input-group-addon"><i class="ti-calendar"></i></div>
+                                            </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="End Time">
+                                                <div class="input-group-addon"><i class="ti-calendar"></i></div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="example-color-input" class="col-2 col-form-label">&nbsp;</label>
+                                    <div class="col-10">
+                                        <button class="btn btn-block btn-success">Submit</button>
+                                    </div>
+                                </div>
+
+
+
+
+                            </form>
+                                    </div>
+                                    <div class="col-md-6 pull-right">
+                                        &nbsp;
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="messages6">
+                                    <div class="col-md-7 col-sm-12">
+                                        <form class="form">
+                                <div class="form-group row">
+                                    <label for="example-text-input" class="col-2 col-form-label">Monday</label>
+                                    <div class="col-3">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="Start Time">
+                                                <div class="input-group-addon"><i class="ti-calendar"></i></div>
+                                            </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="End Time">
+                                                <div class="input-group-addon"><i class="ti-calendar"></i></div>
+                                            </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="Estimated time (25 min)">
+                                            </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="example-text-input" class="col-2 col-form-label">Tuesday</label>
+                                    <div class="col-3">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="Start Time">
+                                                <div class="input-group-addon"><i class="ti-calendar"></i></div>
+                                            </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="End Time">
+                                                <div class="input-group-addon"><i class="ti-calendar"></i></div>
+                                            </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="Estimated time (25 min)">
+                                            </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="example-text-input" class="col-2 col-form-label">Wednesday</label>
+                                    <div class="col-3">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="Start Time">
+                                                <div class="input-group-addon"><i class="ti-calendar"></i></div>
+                                            </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="End Time">
+                                                <div class="input-group-addon"><i class="ti-calendar"></i></div>
+                                            </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="Estimated time (25 min)">
+                                            </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="example-text-input" class="col-2 col-form-label">Thursday</label>
+                                    <div class="col-3">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="Start Time">
+                                                <div class="input-group-addon"><i class="ti-calendar"></i></div>
+                                            </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="End Time">
+                                                <div class="input-group-addon"><i class="ti-calendar"></i></div>
+                                            </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="Estimated time (25 min)">
+                                            </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="example-text-input" class="col-2 col-form-label">Friday</label>
+                                    <div class="col-3">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="Start Time">
+                                                <div class="input-group-addon"><i class="ti-calendar"></i></div>
+                                            </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="End Time">
+                                                <div class="input-group-addon"><i class="ti-calendar"></i></div>
+                                            </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="Estimated time (25 min)">
+                                            </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group row">
+                                    <label for="example-text-input" class="col-2 col-form-label">Saturday</label>
+                                    <div class="col-3">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="Start Time">
+                                                <div class="input-group-addon"><i class="ti-calendar"></i></div>
+                                            </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="End Time">
+                                                <div class="input-group-addon"><i class="ti-calendar"></i></div>
+                                            </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="Estimated time (25 min)">
+                                            </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="example-text-input" class="col-2 col-form-label">Sunday</label>
+                                    <div class="col-3">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="Start Time">
+                                                <div class="input-group-addon"><i class="ti-calendar"></i></div>
+                                            </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="End Time">
+                                                <div class="input-group-addon"><i class="ti-calendar"></i></div>
+                                            </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="Estimated time (25 min)">
+                                            </div>
+                                    </div>
+                                </div>
+
+
+
+
+                                <div class="form-group row">
+                                    <label for="example-color-input" class="col-2 col-form-label">&nbsp;</label>
+                                    <div class="col-6">
+                                        <button class="btn btn-block btn-success">Submit</button>
+                                    </div>
+                                    <div class="col-4">
+                                        &nbsp;
+                                    </div>
+                                </div>
+
+
+
+
+                            </form>
+                                    </div>
+                                    <div class="col-md-6 pull-right">
+                                        &nbsp;
+                                    </div>
+                                    
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="settings6">
+                                    <div class="col-md-6 col-sm-12">
+                                        <form class="form">
+                                <div class="form-group row">
+                                    <label for="example-text-input" class="col-2 col-form-label">Monday</label>
+                                    <div class="col-5">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="Start Time">
+                                                <div class="input-group-addon"><i class="ti-calendar"></i></div>
+                                            </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="End Time">
+                                                <div class="input-group-addon"><i class="ti-calendar"></i></div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="example-text-input" class="col-2 col-form-label">Tuesday</label>
+                                    <div class="col-5">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="Start Time">
+                                                <div class="input-group-addon"><i class="ti-calendar"></i></div>
+                                            </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="End Time">
+                                                <div class="input-group-addon"><i class="ti-calendar"></i></div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="example-text-input" class="col-2 col-form-label">Wednesday</label>
+                                    <div class="col-5">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="Start Time">
+                                                <div class="input-group-addon"><i class="ti-calendar"></i></div>
+                                            </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="End Time">
+                                                <div class="input-group-addon"><i class="ti-calendar"></i></div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="example-text-input" class="col-2 col-form-label">Thursday</label>
+                                    <div class="col-5">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="Start Time">
+                                                <div class="input-group-addon"><i class="ti-calendar"></i></div>
+                                            </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="End Time">
+                                                <div class="input-group-addon"><i class="ti-calendar"></i></div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="example-text-input" class="col-2 col-form-label">Friday</label>
+                                    <div class="col-5">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="Start Time">
+                                                <div class="input-group-addon"><i class="ti-calendar"></i></div>
+                                            </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="End Time">
+                                                <div class="input-group-addon"><i class="ti-calendar"></i></div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="example-text-input" class="col-2 col-form-label">Saturday</label>
+                                    <div class="col-5">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="Start Time">
+                                                <div class="input-group-addon"><i class="ti-calendar"></i></div>
+                                            </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="End Time">
+                                                <div class="input-group-addon"><i class="ti-calendar"></i></div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="example-text-input" class="col-2 col-form-label">Sunday</label>
+                                    <div class="col-5">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="Start Time">
+                                                <div class="input-group-addon"><i class="ti-calendar"></i></div>
+                                            </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="input-group">
+                                                <input type="text" class="form-control" id="exampleInputuname" placeholder="End Time">
+                                                <div class="input-group-addon"><i class="ti-calendar"></i></div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="example-color-input" class="col-2 col-form-label">&nbsp;</label>
+                                    <div class="col-10">
+                                        <button class="btn btn-block btn-success">Submit</button>
+                                    </div>
+                                </div>
+
+
+
+
+                            </form>
+                                    </div>
+
+                                    <div class="col-md-6 pull-right">
+                                        &nbsp;
+                                    </div>
+                                  
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!--row -->
+                 <!-- .right-sidebar -->
+                <div class="right-sidebar">
+                    <div class="slimscrollright">
+                        <div class="rpanel-title"> Admin Menu <span><i class="ti-close right-side-toggle"></i></span> </div>
+                        <div class="r-panel-body">
+                            <ul>
+                                <li><img src="plugins/images/menu-icons/dashboard-icon.png"> <a href="index.html" class="waves-effect">Dashboard</a></li>
+                                <li><img src="plugins/images/menu-icons/settings-icon.png"> <a href="settings.html" class="waves-effect">Settings</a></li>
+                                <li><img src="plugins/images/menu-icons/menu-icon.png"> <a href="menu.html" class="waves-effect">Menu</a></li>
+                                <li><img src="plugins/images/menu-icons/reports-icon.png"> <a href="reports.html" class="waves-effect">Reports</a></li>
+                                <li><img src="plugins/images/menu-icons/coupon-icon.png"> <a href="coupon-list.html" class="waves-effect">Coupon List</a></li>
+                                <li><img src="plugins/images/menu-icons/social-icon.png"> <a href="social-media.html" class="waves-effect">Social Media</a></li>
+                                <li><img src="plugins/images/menu-icons/ratings-icon.png"> <a href="rating.html" class="waves-effect">Ratings and Reviews</a></li>
+                                <li><img src="plugins/images/menu-icons/user-icon.png"> <a href="users.html" class="waves-effect">User List</a></li>
+                                <li><img src="plugins/images/menu-icons/logout-icon.png"> <a href="login.html" class="waves-effect">Log Out</a></li>
+                    
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.right-sidebar -->
+            </div>
+            <!-- /.container-fluid -->
+            <footer class="footer text-center"> 2018 &copy; Talabie </footer>
+        </div>
+        <!-- /#page-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+    
+    <!-- jQuery -->
+    <script src="plugins/bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="bootstrap/dist/js/tether.min.js"></script>
+    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="plugins/bower_components/bootstrap-extension/js/bootstrap-extension.min.js"></script>
+    <!-- Menu Plugin JavaScript -->
+    <script src="plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js"></script>
+    <!--slimscroll JavaScript -->
+    <script src="js/jquery.slimscroll.js"></script>
+    <!--Wave Effects -->
+    <script src="js/waves.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="js/custom.min.js"></script>
+    <!--Style Switcher -->
+    <script src="plugins/bower_components/styleswitcher/jQuery.style.switcher.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" sizes="16x16" href="plugins/images/favicon.png">
+    <title>Talabie Admin</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="plugins/bower_components/bootstrap-extension/css/bootstrap-extension.css" rel="stylesheet">
+    <link href="plugins/bower_components/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.datatables.net/buttons/1.2.2/css/buttons.dataTables.min.css" rel="stylesheet" type="text/css" />
+    <!-- Menu CSS -->
+    <link href="plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
+    <!-- toast CSS -->
+    <link href="plugins/bower_components/toast-master/css/jquery.toast.css" rel="stylesheet">
+    <!-- morris CSS -->
+    <link href="plugins/bower_components/morrisjs/morris.css" rel="stylesheet">
+    <!-- animation CSS -->
+    <link href="css/animate.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- color CSS -->
+    <link href="css/colors/purple.css" id="theme" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="cssload-speeding-wheel"></div>
+    </div>
+    <div id="wrapper">
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top m-b-0">
+            <div class="navbar-header">
+                <ul class="nav navbar-top-links navbar-left hidden-xs">
+                    <li class="right-side-toggle"> <a class="waves-effect waves-light" href="javascript:void(0)"><i class="ti-menu"></i></a></li>
+                    <li>
+                     <a class="logo" href="index.html"><img src="plugins/images/talabie-text.png" alt="home" /></span></a>   
+                    </li>
+                </ul>
+                <ul class="nav navbar-top-links navbar-right pull-right">
+                    <li>
+                        <a class="waves-effect waves-light" href="#"><i class="ti-bell"></i><span class="badge badge-success">6</span>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#"> <i class="ti-user"></i> </a>
+                        <ul class="dropdown-menu dropdown-user animated flipInY">
+                            <!-- <li><a href="#"><i class="ti-user"></i> My Profile</a></li>
+                            <li><a href="#"><i class="ti-wallet"></i> My Balance</a></li>
+                            <li><a href="#"><i class="ti-email"></i> Inbox</a></li>
+                            <li role="separator" class="divider"></li> -->
+                            <li><a href="#"><i class="ti-settings"></i> Account Setting</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#"><i class="fa fa-power-off"></i> Logout</a></li>
+                        </ul>
+                        
+                    </li>
+                   
+                    <li class="dropdown"> <a class="waves-effect waves-light" href="javascript:void(0)">Restaurant name <span class="fa fa-angle-down"></span></a></li>
+                    <!-- /.dropdown -->
+                </ul>
+            </div>
+            <!-- /.navbar-header -->
+            <!-- /.navbar-top-links -->
+            <!-- /.navbar-static-side -->
+        </nav>
+        
+        <!-- Page Content -->
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <div class="row bg-title">
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                        <h4 class="page-title">Reservation</h4> </div>
+                    <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+                        <ol class="breadcrumb">
+                            <li><a href="#">Dashboard</a></li>
+                            <li class="active">Reservation</li>
+                        </ol>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+                
+                <div class="row">
+                    <div class="col-sm-8">
+                        <div class="white-box">
+                            <h3 class="box-title">
+                                <i class="ti-bar-chart"></i> Order vs Day 
+                                
+                            <span style="float: right;">
+                                <select class="form-control" style="display: inline-block;">
+                                                            <option value="">Last 7 days</option>
+                                                            <option value="">Last 1 month</option>
+                                                        </select>
+</span>
+<span style="float: right; margin-right:10px;">
+                                <a href="pickup-reports.html" class="btn btn-success">View</a> 
+                            </span>
+                            </h3>
+                            <div>
+                                <canvas id="chart2" height="150"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+          
+
+                    <div class="col-sm-4">
+                        <div class="white-box">
+                            <h3 class="box-title"><i class="ti-bar-chart"></i> Statistics
+                                <span style="float: right;">
+                                <select class="form-control" style="display: inline-block;">
+                                                            <option value="">Range</option>
+                                                            <option value=""></option>
+                                                        </select>
+</span>
+                            </h3>
+                            <div class="table-responsive">
+                                <table class="table color-table primary-table">
+                                    
+                                    <tbody>
+                                        <tr>
+                                            <td>Total # of orders</td>
+                                            <td class="text-success" style="font-weight: bold;text-align: right;">4</td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>Total completed</td>
+                                            <td class="text-success" style="font-weight: bold;text-align: right;">3</td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>Total cancelled</td>
+                                            <td class="text-success" style="font-weight: bold;text-align: right;">1</td>
+                                           
+                                        </tr>
+                                        <tr>
+                                            <td>Sub total</td>
+                                            <td class="text-danger" style="font-weight: bold;text-align: right;">$200.93</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total tax</td>
+                                            <td class="text-success" style="font-weight: bold;text-align: right;">$2</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total tips</td>
+                                            <td class="text-success" style="font-weight: bold;text-align: right;">$1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total paid</td>
+                                            <td class="text-danger" style="font-weight: bold;text-align: right;">$203.93</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--row -->
+                <!-- /.row -->
+                <div class="row">
+                <div class="col-sm-12">
+                    <div class="white-box">
+                        <h3 class="box-title m-b-0"><button class="btn btn-primary waves-effect waves-light" type="button"><span class="btn-label"><i class="fa fa-list-alt"></i></span>List</button></h3>
+                        <p class="text-muted m-b-30">&nbsp;</p>
+                        <div class="table-responsive">
+                            <table id="example23" class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Week of.</th>
+                                        <th># of orders</th>
+                                        <th>Sub total</th>
+                                        <th>Tips</th>
+                                        <th>Tax</th>
+                                        <th>Talabie fees</th>
+                                        <th>Total paid</th>
+                                        <th>Status</th>
+                                        <th>CSV</th>
+                                        <th></th>
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>05/02/2018 - 11/02/2018</td>
+                                        <td>20</td>
+                                        <td>$ 300</td>
+                                        <td>$ 100</td>
+                                        <td>$ 23</td>
+                                        <td>$ 40</td>
+                                        <td>$ 463</td>
+                                        <td>Paid</td>
+                                        <td>
+                                            <button type="button" class="btn btn-success btn-circle"><i class="ti-download"></i> </button>
+                                            </td>
+                                        <td>
+                                            <button type="button" class="btn btn-circle"><i class="ti-angle-down"></i> </button>
+
+                                            </td>
+                                    </tr>
+                                    
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <!--row -->
+              
+
+
+
+
+
+                <!-- .right-sidebar -->
+                <div class="right-sidebar">
+                    <div class="slimscrollright">
+                        <div class="rpanel-title"> Admin Menu <span><i class="ti-close right-side-toggle"></i></span> </div>
+                        <div class="r-panel-body">
+                            <ul>
+                                <li><img src="plugins/images/menu-icons/dashboard-icon.png"> <a href="index.html" class="waves-effect">Dashboard</a></li>
+                                <li><img src="plugins/images/menu-icons/settings-icon.png"> <a href="settings.html" class="waves-effect">Settings</a></li>
+                                <li><img src="plugins/images/menu-icons/menu-icon.png"> <a href="menu.html" class="waves-effect">Menu</a></li>
+                                <li><img src="plugins/images/menu-icons/reports-icon.png"> <a href="reports.html" class="waves-effect">Reports</a></li>
+                                <li><img src="plugins/images/menu-icons/coupon-icon.png"> <a href="coupon-list.html" class="waves-effect">Coupon List</a></li>
+                                <li><img src="plugins/images/menu-icons/social-icon.png"> <a href="social-media.html" class="waves-effect">Social Media</a></li>
+                                <li><img src="plugins/images/menu-icons/ratings-icon.png"> <a href="rating.html" class="waves-effect">Ratings and Reviews</a></li>
+                                <li><img src="plugins/images/menu-icons/user-icon.png"> <a href="users.html" class="waves-effect">User List</a></li>
+                                <li><img src="plugins/images/menu-icons/logout-icon.png"> <a href="login.html" class="waves-effect">Log Out</a></li>
+                    
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.right-sidebar -->
+            </div>
+            <!-- /.container-fluid -->
+            <footer class="footer text-center"> 2018 &copy; Talabie </footer>
+        </div>
+        <!-- /#page-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+    <!-- jQuery -->
+    <script src="plugins/bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="bootstrap/dist/js/tether.min.js"></script>
+    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="plugins/bower_components/bootstrap-extension/js/bootstrap-extension.min.js"></script>
+    <!-- Menu Plugin JavaScript -->
+    <script src="plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js"></script>
+    <!--slimscroll JavaScript -->
+    <script src="js/jquery.slimscroll.js"></script>
+    <!--Wave Effects -->
+    <script src="js/waves.js"></script>
+    <!--Counter js -->
+    <script src="plugins/bower_components/waypoints/lib/jquery.waypoints.js"></script>
+    <script src="plugins/bower_components/counterup/jquery.counterup.min.js"></script>
+    <!--Morris JavaScript -->
+    <script src="plugins/bower_components/raphael/raphael-min.js"></script>
+    <script src="plugins/bower_components/morrisjs/morris.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="js/custom.min.js"></script>
+    <script src="js/dashboard1.js"></script>
+    <!-- Sparkline chart JavaScript -->
+    <script src="plugins/bower_components/jquery-sparkline/jquery.sparkline.min.js"></script>
+    <script src="plugins/bower_components/jquery-sparkline/jquery.charts-sparkline.js"></script>
+    <script src="plugins/bower_components/toast-master/js/jquery.toast.js"></script>
+
+    <script src="plugins/bower_components/datatables/jquery.dataTables.min.js"></script>
+    <!-- start - This is for export functionality only -->
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.flash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js"></script>
+    <!-- end - This is for export functionality only -->
+    <script>
+        $(document).ready(function () {
+            $('#myTable').DataTable();
+            $(document).ready(function () {
+                var table = $('#example').DataTable({
+                    "columnDefs": [
+                        {
+                            "visible": false
+                            , "targets": 2
+                    }
+          ]
+                    , "order": [[2, 'asc']]
+                    , "displayLength": 25
+                    , "drawCallback": function (settings) {
+                        var api = this.api();
+                        var rows = api.rows({
+                            page: 'current'
+                        }).nodes();
+                        var last = null;
+                        api.column(2, {
+                            page: 'current'
+                        }).data().each(function (group, i) {
+                            if (last !== group) {
+                                $(rows).eq(i).before('<tr class="group"><td colspan="5">' + group + '</td></tr>');
+                                last = group;
+                            }
+                        });
+                    }
+                });
+                // Order by the grouping
+                $('#example tbody').on('click', 'tr.group', function () {
+                    var currentOrder = table.order()[0];
+                    if (currentOrder[0] === 2 && currentOrder[1] === 'asc') {
+                        table.order([2, 'desc']).draw();
+                    }
+                    else {
+                        table.order([2, 'asc']).draw();
+                    }
+                });
+            });
+        });
+        $('#example23').DataTable({
+            dom: 'Bfrtip'
+            , buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ]
+        });
+    </script>
+
+    <!--Style Switcher -->
+    <script src="plugins/bower_components/styleswitcher/jQuery.style.switcher.js"></script>
+</body>
+
+</html>
